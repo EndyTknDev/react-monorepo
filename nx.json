@@ -1,0 +1,16 @@
+{
+  "targetDefaults": {
+    "start": {
+      "dependsOn": []
+    },
+    "build": {
+      "dependsOn": []
+    },
+    "test": {
+      "dependsOn": []
+    },
+    "eject": {
+      "dependsOn": []
+    }
+  }
+}

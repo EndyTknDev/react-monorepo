@@ -1,0 +1,132 @@
+import { Meta, Canvas, ColorPalette, ColorItem, Story } from '@storybook/blocks';
+import { useTheme, ThemeProvider } from "@mui/material";
+
+import themes from "../../Standard"
+
+<Meta title="theme/Colors"/>
+
+export function MainColors({isDark = false }) {
+    const theme = isDark ? themes.dark:themes.light;
+    return (
+        <ThemeProvider theme={theme}>
+          <ColorPalette>
+              <ColorItem
+                  title="theme.pallete.primary"
+                  subtitle="Primary"
+                  colors={{
+                      light: theme?.palette?.primary?.light,
+                      main: theme?.palette?.primary?.main,
+                      dark: theme?.palette?.primary?.dark,
+                      contrast: theme?.palette?.success?.contrastText,
+                  }}
+              />
+              <ColorItem
+                  title="theme.pallete.secondary"
+                  subtitle="Secondary"
+                  colors={{
+                      light: theme?.palette?.secondary?.light,
+                      main: theme?.palette?.secondary?.main,
+                      dark: theme?.palette?.secondary?.dark,
+                      contrast: theme?.palette?.success?.contrastText,
+                  }}
+              />
+          </ColorPalette>
+        </ThemeProvider>
+    );
+}
+
+export function SemanticColors({isDark = false }) {
+    const theme = isDark ? themes.dark:themes.light;
+    return (
+        <ThemeProvider theme={theme}>
+          <ColorPalette>
+              <ColorItem
+                  title="theme.pallete.success"
+                  subtitle="Primary"
+                  colors={{
+                      light: theme?.palette?.success?.light,
+                      main: theme?.palette?.success?.main,
+                      dark: theme?.palette?.success?.dark,
+                      contrast: theme?.palette?.success?.contrastText,
+                  }}
+              />
+              <ColorItem
+                  title="theme.pallete.secondary"
+                  subtitle="Secondary"
+                  colors={{
+                      light: theme?.palette?.error?.light,
+                      main: theme?.palette?.error?.main,
+                      dark: theme?.palette?.error?.dark,
+                      contrast: theme?.palette?.success?.contrastText,
+                  }}
+              />
+              <ColorItem
+                  title="theme.pallete.secondary"
+                  subtitle="Secondary"
+                  colors={{
+                      light: theme?.palette?.warning?.light,
+                      main: theme?.palette?.warning?.main,
+                      dark: theme?.palette?.warning?.dark,
+                      contrast: theme?.palette?.success?.contrastText,
+                  }}
+              />
+              <ColorItem
+                  title="theme.pallete.secondary"
+                  subtitle="Secondary"
+                  colors={{
+                      light: theme?.palette?.info?.light,
+                      main: theme?.palette?.info?.main,
+                      dark: theme?.palette?.info?.dark,
+                      contrast: theme?.palette?.success?.contrastText,
+                  }}
+              />
+          </ColorPalette>
+        </ThemeProvider>
+    );
+}
+
+export function BackgroundColors({isDark = false }) {
+    const theme = isDark ? themes.dark:themes.light;
+    return (
+        <ThemeProvider theme={theme}>
+          <ColorPalette>
+              <ColorItem
+                  title="theme.pallete.default"
+                  subtitle="Primary"
+                  colors={{
+                      default: theme?.palette?.background?.default,
+                      paper: theme?.palette?.background?.paper,
+                  }}
+              />
+          </ColorPalette>
+        </ThemeProvider>
+    );
+}
+
+# Standard Light Theme
+
+## Main Colors
+
+<MainColors isDark={false} />
+
+## Semantic Colors
+
+<SemanticColors isDark={false} />
+
+## Background Colors
+
+<BackgroundColors isDark={false} />
+
+# Standard Dark Theme
+
+## Main Colors
+
+<MainColors isDark={true} />
+
+## Semantic
+
+<SemanticColors isDark={true} />
+
+## Background Colors
+
+<BackgroundColors isDark={true} />

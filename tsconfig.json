@@ -1,0 +1,14 @@
+{
+  "references": [
+    { "path": "./packages/common-utils" },
+    { "path": "./packages/props-helpers" },
+    { "path": "./packages/react-ui-lib" },
+    { "path": "./packages/react-hooks" }
+  ],
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationMap": true
+  },
+  "files": []
+}

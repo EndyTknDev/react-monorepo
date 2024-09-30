@@ -1,0 +1,46 @@
+import { Meta, Canvas, Typeset, Story } from '@storybook/blocks';
+import { useTheme, ThemeProvider, Box, Paper, Typography } from "@mui/material";
+import themes from "../../Standard"
+
+<Meta title="theme/Shadows"/>
+
+export function ShadowsList({isDark = false}) {
+    const theme = isDark ? themes.dark:themes.light;
+    const paperProps = {
+        sx: {
+            padding: "12px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+            minWidth: 100,
+            minHeight: 100,
+        },
+    }
+    const arr = Array.from(Array(24).keys());
+    return (
+        <ThemeProvider theme={theme}>
+            <Box
+                sx={{
+                    display: "grid",
+                    gridTemplateColumns: "max-content auto",
+                    gridTemplateRows: "auto",
+                    gridAutoFlow: "row",
+                    gap: "24px 32px",
+                    flexDirection: "column"
+                }}
+            >
+                {arr.map((idx) => <>
+                    <Typography variant="subtitle2" sx={{margin: 0}}>
+                        <b>Elevation {idx}</b>
+                    </Typography>
+                    <Paper {...paperProps} elevation={idx} />
+                </>)}
+            </Box>
+        </ThemeProvider>
+    );
+}
+
+# Shadows
+
+<ShadowsList />

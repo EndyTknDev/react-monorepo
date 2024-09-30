@@ -1,0 +1,14 @@
+{
+  "name": "@mono/common-utils",
+  "version": "0.0.1",
+  "author": "endytkndev",
+  "description": "",
+  "main": "./src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}

@@ -1,0 +1,43 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:eslint-plugin-import/recommended",
+		"plugin:eslint-plugin-import/typescript",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:react/recommended",
+		"prettier"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+		},
+	"plugins": [
+		"@typescript-eslint",
+		"react",
+		"prettier"
+	],
+	"rules": {
+		"object-curly-newline": "off",
+		"indent": ["error", 4],
+		"react/jsx-indent": "off",
+		"import/no-named-as-default": "off",
+		"import/export": "off",
+		"no-restricted-exports": "off",
+		"react/function-component-definition": "off",
+		"react/jsx-props-no-spreading": "off",
+		"react/prop-types": "off",
+		"react/require-default-props": "off",
+		"@typescript-eslint/no-unused-vars": "warn",
+		"no-unused-vars": "off",
+		"quotes": ["error", "double"],
+		"semi": ["error", "always"]
+	}
+}

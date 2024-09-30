@@ -1,0 +1,23 @@
+{
+	"extends": "../../.eslintrc.frontend.json",
+	"parserOptions": {
+	  "project": "./tsconfig.json"
+	},
+	"overrides": [
+	  {
+		"files": ["src/**/*.(ts|tsx|js|jsx)"],
+		"parserOptions": {
+		  "project": "./tsconfig.json"
+		}
+	  }
+	],
+	"settings": {
+	  "import/resolver": {
+		"node": {
+		  "paths": ["src"],
+		  "extensions": [".js", ".jsx", ".ts", ".tsx"]
+		}
+	  }
+	}
+  }
+  

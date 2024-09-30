@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    // "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "module": "ESNext",
+    "target": "ES2022"
+  },
+  "include": ["src", "src/**/*.ts"],
+  "references": [],
+  "exclude": ["node_modules"]
+}
